@@ -15,7 +15,11 @@ class DjangoLoggingMiddleware:
         response = self.get_response(request)
 
         logger.info(f"Response status code: {response.status_code}")
-        logger.info(f"Response media type: {response.accepted_media_type}")
+        try:
+            logger.info(f"Response mediatype: {response.accepted_media_type}")
+            logger.info(f"Response _mediatype: {response.charset}")
+        except:
+            logger.info(f"Response mediatype: {response.charset}")
         logger.info(f"Response data: {response.data}")
 
         return response
