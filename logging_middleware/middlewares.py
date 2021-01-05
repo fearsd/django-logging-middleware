@@ -18,8 +18,9 @@ class DjangoLoggingMiddleware:
         try:
             logger.info(f"Response mediatype: {response.accepted_media_type}")
             logger.info(f"Response _mediatype: {response.charset}")
+            logger.info(f"Response data: {response.data}")
         except:
             logger.info(f"Response mediatype: {response.charset}")
-        logger.info(f"Response data: {response.data}")
-
+            logger.info(f"Response data: {response.content}")
+        
         return response
