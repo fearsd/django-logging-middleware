@@ -1,0 +1,1 @@
+from logging_middleware.checks import check_settings
