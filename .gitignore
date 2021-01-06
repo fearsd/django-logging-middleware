@@ -13,3 +13,6 @@ MANIFEST
 coverage.*
 
 venv/
+
+/.vscode/
+/.idea/
