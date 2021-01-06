@@ -1,5 +1,6 @@
 aiocontextvars==0.2.2
 asgiref==3.3.1
+attrs==20.3.0
 bleach==3.2.1
 certifi==2020.12.5
 cffi==1.14.4
@@ -12,14 +13,19 @@ docutils==0.16
 idna==2.10
 immutables==0.14
 importlib-metadata==3.3.0
+iniconfig==1.1.1
 jeepney==0.6.0
 keyring==21.8.0
 loguru==0.5.3
 packaging==20.8
 pkginfo==1.6.1
+pluggy==0.13.1
+py==1.10.0
 pycparser==2.20
 Pygments==2.7.3
 pyparsing==2.4.7
+pytest==6.2.1
+pytest-django==4.1.0
 pytz==2020.5
 readme-renderer==28.0
 requests==2.25.1
@@ -28,6 +34,7 @@ rfc3986==1.4.0
 SecretStorage==3.3.0
 six==1.15.0
 sqlparse==0.4.1
+toml==0.10.2
 tqdm==4.55.1
 twine==3.3.0
 typing-extensions==3.7.4.3
