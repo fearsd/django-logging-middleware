@@ -1,6 +1,8 @@
 from django.conf import settings
 import django
 
+from logging_middleware.settings import DEFAULTS
+
 settings.configure(
     SECRET_KEY = "NOTASECRET",
     INSTALLED_APPS = [
@@ -10,6 +12,7 @@ settings.configure(
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'rest_framework',
         "logging_middleware", 
         "tests"
     ],
@@ -25,7 +28,8 @@ settings.configure(
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
         "logging_middleware.middlewares.DjangoLoggingMiddleware"
-    ]
+    ],
+    DJANGO_LOGGING_MIDDLEWARE = DEFAULTS
 )
 
 django.setup()
