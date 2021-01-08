@@ -20,7 +20,7 @@ Sometimes code in django views becomes messy because we log requests and respons
 2. Add `'logging_middleware'` to your `INSTALLED_APPS` setting.
 
     ```
-    3. INSTALLED_APPS = [ 
+    INSTALLED_APPS = [ 
         ... 
         'logging_middleware'
     ]
