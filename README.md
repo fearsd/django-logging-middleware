@@ -4,12 +4,11 @@ The extension for [django](https://github.com/django/django) to log requests and
 
 Sometimes code in django views becomes messy because we log requests and response. Also it takes a lot of time to write logs in every view. Using this extension for django, logging becomes simple: all you need is five minutes of installing this package and setting configuration!
 
-**Note this package is not tested with a bunch of python and django versions. Package is under active development**
 
 ## Requirements
-* python 3.6
-* django 3.1
-* django rest framework 3.12
+* python >=3.6
+* django >=3.0
+* django rest framework >= 3.10 (optional)
 
 ## Installation
 
