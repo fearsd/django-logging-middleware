@@ -15,6 +15,9 @@ class Settings:
         elif 'DEFAULT_FORMAT' not in list(self.settings.keys()):
             self.DEFAULT_FORMAT = DEFAULTS['DEFAULT_FORMAT']
             self.MESSAGE_FORMAT = DEFAULTS['MESSAGE_FORMAT']
+        elif not isinstance(self.settings['DEFAULT_FORMAT'], bool):
+            self.DEFAULT_FORMAT = DEFAULTS['DEFAULT_FORMAT']
+            self.MESSAGE_FORMAT = DEFAULTS['MESSAGE_FORMAT']
         elif 'DEFAULT_FORMAT' in list(self.settings.keys()):
             if not self.settings['DEFAULT_FORMAT'] and 'MESSAGE_FORMAT' in list(self.settings.keys()):
                 self.DEFAULT_FORMAT = self.settings['DEFAULT_FORMAT']

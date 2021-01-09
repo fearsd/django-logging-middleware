@@ -40,3 +40,8 @@ def test_check_settings_if_user_didnt_set_default_format_but_set_message_format(
     assert settings.DEFAULT_FORMAT == DEFAULTS['DEFAULT_FORMAT']
     assert settings.MESSAGE_FORMAT == DEFAULTS['MESSAGE_FORMAT']
 
+@override_settings(DJANGO_LOGGING_MIDDLEWARE={'DEFAULT_FORMAT': ''})
+def test_check_settings_if_user_set_wrong_data():
+    settings = Settings(_settings)
+    assert settings.DEFAULT_FORMAT == DEFAULTS['DEFAULT_FORMAT']
+    assert settings.MESSAGE_FORMAT == DEFAULTS['MESSAGE_FORMAT']

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="django-logging-middleware", # Replace with your own username
-    version="0.0.2alpha4",
+    version="0.0.2beta1",
     author="Rifat Fazlutdinov",
     author_email="rifatfazlutdinov@gmail.com",
     description="A small package to log django requests and responses",

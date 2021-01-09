@@ -18,3 +18,14 @@ venv/
 /.idea/
 /.pytest_cache/
 /__pycache__/
+/.tox/
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+*.sqlite3
