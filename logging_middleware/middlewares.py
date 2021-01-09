@@ -19,13 +19,12 @@ class DjangoLoggingMiddleware:
         logger.info(f"Request URL: {request.get_raw_uri()}")
         logger.info(f"Request METHOD: {request.method}")
         logger.info(f"Request HEADERS: {request.headers}")
-        logger.info(f"Request USER: {request.user}")
         logger.info(f"Request GET data: {request.GET}")
         logger.info(f"Request POST data: {request.POST}")
         logger.info(f"Request FILES data: {request.FILES}")
 
         response = self.get_response(request)
-
+        logger.info(f"Request USER: {request.user}")
         logger.info(f"Response STATUS_CODE: {response.status_code}")
         try:
             logger.info(f"Response MEDIA_TYPE: {response.accepted_media_type}")
