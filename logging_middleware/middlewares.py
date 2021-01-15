@@ -32,6 +32,9 @@ class DjangoLoggingMiddleware:
             logger.info(f"Response DATA: {response.data}")
         except:
             logger.info(f"Response MEDIA_TYPE: {response.charset}")
-            logger.info(f"Response DATA: {response.content}")
+            try:
+                logger.info(f"Response DATA: {response.content}")
+            except:
+                logger.info(f"Response DATA: {response.streaming_content}")
         
         return response
